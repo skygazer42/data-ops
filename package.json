@@ -1,0 +1,23 @@
+{
+  "name": "pro-ops",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build -w @pro-ops/shared && npm run build -w @pro-ops/api && npm run build -w @pro-ops/web",
+    "typecheck": "npm run build -w @pro-ops/shared && npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @pro-ops/api",
+    "lint": "eslint apps packages scripts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
