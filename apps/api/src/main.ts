@@ -13,4 +13,4 @@ const app = await createApp({
 });
 app.enableShutdownHooks();
 await app.listen(port, process.env.HOST ?? '127.0.0.1');
-console.log(`Pro Ops API ready at http://${process.env.HOST ?? '127.0.0.1'}:${port}/api/health (${mode})`);
+console.log(`Data Ops API ready at http://${process.env.HOST ?? '127.0.0.1'}:${port}/api/health (${mode})`);

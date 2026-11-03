@@ -14,7 +14,7 @@ export class MonitoringController {
   @Get('health')
   async health() {
     await this.database.query('SELECT 1');
-    return { status: 'ok', service: 'pro-ops', time: new Date().toISOString() };
+    return { status: 'ok', service: 'data-ops', time: new Date().toISOString() };
   }
 
   @Get('dashboard')

@@ -14,7 +14,7 @@ function probeStatus(address: string, signal: AbortSignal): Promise<number> {
   const target = new URL(address);
   const request = target.protocol === 'https:' ? requestHttps : requestHttp;
   return new Promise((resolve, reject) => {
-    const outgoing = request(target, { signal, headers: { 'User-Agent': 'Pro-Ops/0.1 health-check' } }, (response) => {
+    const outgoing = request(target, { signal, headers: { 'User-Agent': 'Data-Ops/0.1 health-check' } }, (response) => {
       response.destroy();
       resolve(response.statusCode!);
     });

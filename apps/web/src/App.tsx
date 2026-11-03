@@ -28,7 +28,7 @@ function subscribeNarrowScreen(listener: () => void) { const media = window.matc
 function narrowScreenSnapshot() { return window.matchMedia('(max-width: 700px)').matches; }
 
 function Brand() {
-  return <div className="brand"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8" stroke="currentColor" strokeWidth="1.7" /><circle cx="20" cy="20" r="7" fill="#173c32" stroke="currentColor" strokeWidth="1.7" /></svg><div>PRO OPS<small>个人项目管理</small></div></div>;
+  return <div className="brand"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 3v34M3 20h34M8 8l24 24M8 32 32 8" stroke="currentColor" strokeWidth="1.7" /><circle cx="20" cy="20" r="7" fill="#173c32" stroke="currentColor" strokeWidth="1.7" /></svg><div>DATA OPS<small>个人项目管理</small></div></div>;
 }
 
 export function App() {
@@ -54,7 +54,7 @@ export function App() {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
-  useEffect(() => { document.title = `${currentPage.label} · Pro Ops`; }, [currentPage.label]);
+  useEffect(() => { document.title = `${currentPage.label} · Data Ops`; }, [currentPage.label]);
   useEffect(() => { if (!toast) return; const timer = window.setTimeout(() => setToast(null), 5000); return () => window.clearTimeout(timer); }, [toast]);
 
   function navigate(next: Page) { window.location.hash = `/${next}`; setMobileOpen(false); }

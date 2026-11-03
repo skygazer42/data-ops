@@ -1,4 +1,4 @@
-# Pro Ops Foundation Implementation Plan
+# Data Ops Foundation Implementation Plan
 
 > **For agentic workers:** Use superpowers:executing-plans in the current session. Preserve 01. No commits or branches are authorized.
 
@@ -74,5 +74,5 @@ Files: `compose.yaml`, `Dockerfile`, `deploy/nginx.conf`, `README.md`, `docs/arc
 - API verification: 21 passing tests across endpoint integration and database lifecycle/persistence suites. Type checking, lint, production builds and Compose structural validation pass.
 - Backend/deployment review identified five material issues. Regression cases reproduced stale-version checks, blocked-port false failures, incomplete shutdown draining and unhandled pool errors; fixes pass. Nginx now dynamically resolves the API through Docker DNS; container runtime remains unverified because the engine is unavailable.
 - Browser verification includes persisted create/edit/check flows, validation/conflict failures, search/environment/status filtering, mobile navigation/forms at 390 px, offline refresh retaining data, failed saves retaining drafts and successful reconnection. Deletion confirmation was inspected in the UI; test-owned data was removed through the local API.
-- Added a real Pro Ops project pointing to the local API health endpoint. The six original project records remain unconfigured until their actual endpoints are supplied. Temporary verification projects were removed; historical activities remain as designed.
+- Added a real Data Ops project pointing to the local API health endpoint. The six original project records remain unconfigured until their actual endpoints are supplied. Temporary verification projects were removed; historical activities remain as designed.
 - Full validation evidence and deployment limitations: `docs/verification/2026-11-03-first-release.md`.
